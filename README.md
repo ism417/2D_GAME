@@ -11,9 +11,15 @@ and some other very basic gameplay elements.
 </p>
 
 First thing firest we start with the map name it mast end with ".ber" .berrrr or .berber not valide.\
-now that we know that the map name is right we read from the file, of cours dont forget to check if there is a file with that name in the first place, you can use your get_next_line, I use a small version hhhhhh, when reading is finish in my case the map will be in a one string, the lines are separeted with '\n' now we do the spit with '\n'. Finally our map is in two demation, talkin about demation we have to check if the map is rectangle(square is a rectangle a perfect one) just by checking the lenght of the lines to be equal.\
-Now that our map is in a perfect shape we check the boders of the map it must have only walls '1' every map[0][i] and map[the map width][i] equal '1' and map[i][0] map[i][the map width] equal '1'. then check the element at least one collectable 'C' and only one player 'P' and one exit 'E' and nothing else. that set we finish parsing.\
-the last error to check is there a path in the game where the player 'P' collect all the coins 'C' and exit 'E', I use a recursive function to check every direction and the base case is '1' and 'E' if map[i][j] == 'C' increment the count of the coins and overwrite with '1' else overwrite with '1', At hte end if the count of the coins is equal to the number of the coins and you reach the exit it's a valide map and versa versa.
+now that we know that the map name is right we read from the file, of cours dont forget to check if there is a file with that name in the first place, you can use your get_next_line, I use a small version hhhhhh, when reading is finish in my case the map will be in a one string.\
+the lines are separeted with '\n' now we do the split with '\n'. Finally our map is in two demation.\
+talkin about demation we have to check if the map is rectangle(square is a rectangle a perfect one) just by checking the lenght of the lines to be equal.\
+Now that our map is in a perfect shape we check the boders of the map it must have only walls '1' every map[0][i] and map[the map width][i] equal '1' and map[i][0] map[i][the map width] equal '1'.\
+then check the element at least one collectable 'C' and only one player 'P' and one exit 'E' and nothing else.\
+that set we finish parsing.\
+the last error to check is there a path in the game where the player 'P' collect all the coins 'C' and exit 'E'.\
+I use a recursive function to check every direction and the base case is '1' and 'E' if map[i][j] == 'C' increment the count of the coins and overwrite with '1' else overwrite with '1'.\
+At the end if the count of the coins is equal to the number of the coins and you reach the exit it's a valide map and versa versa.
 
 ## minilibx
 
